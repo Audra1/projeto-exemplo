@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-&6!60n5-(f%ws_)f=q33*!(+kau&e_n#t@tjn16k_)jqww9kh5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -79,8 +79,8 @@ WSGI_APPLICATION = 'editora.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'postgresql://exemplo_livro_5js7_user:6SLfvGg7okhzoHTAT9anCPdVoPLOXmuv@dpg-ct4d0rl6l47c73f8mce0-a.oregon-postgres.render.com/exemplo_livro_5js7': dj_database_url.config(
-        default='',
+    'default': dj_database_url.config(
+        default='postgresql://portal_ia_educacao_db_user:pAO4NxHIwDwnGhS9j32c4DbR9radwGtb@dpg-ct70esggph6c73efm240-a.oregon-postgres.render.com/portal_ia_educacao_db',
         conn_max_age=600,
         ssl_require=not DEBUG
     )
